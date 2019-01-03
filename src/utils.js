@@ -4,4 +4,5 @@
 // export const validateInput = input => true;
 // export const validteInput = input => typeof input === 'string';
 
-export const validateInput = input => /[a-zA-Z]+\s*/g.test(input);
+export const validateInput = input =>
+  !input.length || (/[a-zA-Z]+\s*/g.test(input) && !/\d+/g.test(input));
