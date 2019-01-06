@@ -6,4 +6,3 @@
 // letters with spaces valid
 // Mixed letters/numbers invalid
 // Symbols invalid
-// Only spaces invalid
