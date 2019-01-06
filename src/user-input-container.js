@@ -26,7 +26,6 @@ export default class UserInputContainer extends Component {
   };
 
   render() {
-    console.log(`this.state.valid:`, this.state.valid);
     return (
       <div>
         <h1 id="banner">Hello, {this.state.name}!</h1>

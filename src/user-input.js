@@ -5,7 +5,7 @@
 import React from 'react';
 
 const UserInput = ({ valid, inputValue, onChange, onSubmit }) => (
-  <form>
+  <div>
     <input
       id="name"
       type="text"
@@ -17,7 +17,12 @@ const UserInput = ({ valid, inputValue, onChange, onSubmit }) => (
     <button id="button" onClick={onSubmit}>
       Change name
     </button>
-  </form>
+    {!valid && (
+      <p id="warning" style={{ color: 'red' }}>
+        Name can only include letters and spaces
+      </p>
+    )}
+  </div>
 );
 
 export default UserInput;
