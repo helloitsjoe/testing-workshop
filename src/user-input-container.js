@@ -1,5 +1,7 @@
 // Create a react app that says "Hello <user>"
 // with an input to let the user change their name
+// handleChange
+// handleSubmit
 
 import React, { Component } from 'react';
 import UserInput from './user-input';
