@@ -1,3 +1,31 @@
+# Frontend Testing Workshop
+
+### Instructions:
+
+#### `validateInput`
+
+1. Test that it returns true with a string input
+2. Create `validateInput` function, return `true`
+3. Test that it returns false with a number input
+4. Update function to check isNaN
+5. Test edge cases
+6. Update function with regex
+
+#### `UserInput`
+
+1. Write a test that it displays warning text on invalid input and vice versa
+2. Create component, make test pass
+
+#### `UserInputContainer`
+
+1. Test that default text is 'Hello, you!'
+2. Create component, make it pass
+3. Test that display text changes on submit
+4. Make test pass
+5. Integration test: warning on invalid input, button is disabled
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
