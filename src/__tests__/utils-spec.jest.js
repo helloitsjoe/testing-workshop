@@ -22,7 +22,7 @@ test.each`
   ${'single letter'}          | ${'a'}         | ${true}
   ${'single number'}          | ${'1'}         | ${false}
   ${'symbol'}                 | ${'-'}         | ${false}
-  ${'symbol'}                 | ${' '}         | ${false}
+  ${'only spaces'}            | ${' '}         | ${false}
 `('$description - valid: $valid', ({ text, valid }) => {
   expect(validateInput(text)).toBe(valid);
 });
