@@ -1,5 +1,6 @@
-// Create a react app that says "Hello <user>"
-// with an input to let the user change their name
+// 1. h1 that says "Hello <user>"
+// 2. UserInput component with props: valid, inputValue, onChange, onSubmit
+// 3. state = {name, inputValue, valid}
 // handleChange
 // handleSubmit
 
