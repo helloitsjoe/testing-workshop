@@ -1,7 +1,4 @@
 // 1. Validate that input is only letters and spaces
-
-// export const validateInput = () => {};
-// export const validateInput = input => true;
-// export const validteInput = input => typeof input === 'string';
-
-export const validateInput = input => /[a-zA-Z]+\s*/g.test(input);
+// Start with noop
+// return true
+// return regex
