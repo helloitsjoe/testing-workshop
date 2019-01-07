@@ -1,15 +1,8 @@
 # Frontend Testing Workshop
 
-### Requirements:
-
-1. User input for name
-2. User input only accepts letters and spaces
-3. If input is invalid, displays warning, does not submit
-4. Banner that says 'Please enter your name'
-5. Submit button changes banner to 'Welcome, [name]!'
-6. Submit with empty input resets message
-
 ### Instructions:
+
+Fulfill [requirements](https://github.com/helloitsjoe/testing-workshop/issues/3)
 
 #### `validateInput`
 
