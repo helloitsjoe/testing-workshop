@@ -1,5 +1,13 @@
 # Frontend Testing Workshop
 
+### Requirements:
+
+1. Banner that says 'Please enter your name'
+2. User input for name
+3. Submit button changes banner to 'Welcome, <name>!'
+4. User input only accepts letters and spaces
+5. Displays warning if input is invalid
+
 ### Instructions:
 
 #### `validateInput`
@@ -23,6 +31,15 @@
 3. Test that display text changes on submit
 4. Make test pass
 5. Integration test: warning on invalid input, button is disabled
+
+---
+
+### Notes:
+
+- Isolate tests - use UserInputContainer as stateful example
+- Notice what we're intentionally not testing:
+  - `state` and class methods (internals)
+  - `className`s - (not a functional concern)
 
 ---
 

@@ -1,0 +1,37 @@
+body,
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color: purple;
+}
+
+input {
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+/* button:focus, */
+input:focus {
+  outline: 0;
+}
+
+button {
+  border: 0;
+  background-color: purple;
+  border-radius: 4px;
+  color: white;
+  padding: 4px 10px;
+  margin: 10px;
+}
