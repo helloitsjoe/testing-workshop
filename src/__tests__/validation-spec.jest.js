@@ -4,5 +4,6 @@
 // Single letter valid
 // Single number invalid
 // letters with spaces valid
+// empty string valid
 // Mixed letters/numbers invalid
 // Symbols invalid

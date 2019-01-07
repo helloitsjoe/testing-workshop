@@ -2,11 +2,12 @@
 
 ### Requirements:
 
-1. Banner that says 'Please enter your name'
-2. User input for name
-3. Submit button changes banner to 'Welcome, <name>!'
-4. User input only accepts letters and spaces
-5. Displays warning if input is invalid
+1. User input for name
+2. User input only accepts letters and spaces
+3. If input is invalid, displays warning, does not submit
+4. Banner that says 'Please enter your name'
+5. Submit button changes banner to 'Welcome, <name>!'
+6. Submit with empty input resets message
 
 ### Instructions:
 
