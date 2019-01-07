@@ -10,21 +10,33 @@ Fulfill [requirements](https://github.com/helloitsjoe/testing-workshop/issues/3)
 2. Create `validateInput` function, return `true`
 3. Test that it returns false with a number input
 4. Update function to check isNaN
-5. Test edge cases
-6. Update function with regex
 
 #### `UserInput`
 
-1. Write a test that it displays warning text on invalid input and vice versa
+1. Write a test that it displays input and button
 2. Create component, make test pass
+3. Test for warning text on invalid input and vice versa
+4. Update component with `valid` prop
 
 #### `UserInputContainer`
 
-1. Test that default text is 'Hello, you!'
-2. Create component, make it pass
-3. Test that display text changes on submit
-4. Make test pass
-5. Integration test: warning on invalid input, button is disabled
+1. Update `index.js` to render `UserInputContainer`
+2. Make tests pass again
+3. Test that default text is 'Please enter your name'
+4. Create component, make it pass
+5. Test that submit changes banner text to 'Welcome, [user]!'
+6. Make test pass
+7. Test that submit resets banner text if no input
+8. Make test pass
+9. Integration test: warning on invalid input, button is disabled
+
+#### Back to `validateInput`
+1. Write test for bug - mix of letters and numbers
+2. Update function with regex
+
+#### Refactor tests
+1. Show tests break with component mounted once in `describe` scope
+2. Write `beforeEach`, `afterEach`
 
 ---
 
