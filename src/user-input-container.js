@@ -6,4 +6,4 @@
 
 // import React, { Component } from 'react';
 // import UserInput from './user-input';
-// import { validateInput } from './validation';
+// import { validate } from './validation';
