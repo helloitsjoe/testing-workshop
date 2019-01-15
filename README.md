@@ -1,8 +1,29 @@
 # Frontend Testing Workshop
 
+This is a live coding workshop to walk through building a small React app using TDD.
+
+### Preparation:
+
+Set up a screen with these windows:
+
+- Code editor
+- The [requirements][1]
+- A terminal with `npm run test -- --watch` running
+- The page you're building (`npm start` will display a `localhost` link, the page will auto reload as you make changes)
+
 ### Instructions:
 
-Fulfill [requirements](https://github.com/helloitsjoe/testing-workshop/issues/3)
+You're building an app that has:
+
+- A container with a banner and a presentational component `UserInput`
+- `UserInput` component with an input and a submit button, and a warning that displays if the input is invalid
+- A validation function - letters/spaces are valid, numbers are invalid
+
+TDD it from the bottom up, starting with the validation function, then the `UserInput` presentational component, and finally the container that handles input validation and form submission.
+
+Use the [requirements][1] as a guide, checking off each box after you've both written tests for and built each feature.
+
+Be prepared to talk through your process, explaining why you're doing certain things, as well as avoiding certain things.
 
 #### `validateInput`
 
@@ -31,10 +52,14 @@ Fulfill [requirements](https://github.com/helloitsjoe/testing-workshop/issues/3)
 9. Integration test: warning on invalid input, button is disabled
 
 #### Back to `validateInput`
+
 1. Write test for bug - mix of letters and numbers
 2. Update function with regex
 
+### BONUS, if time allows:
+
 #### Refactor tests
+
 1. Show tests break with component mounted once in `describe` scope
 2. Write `beforeEach`, `afterEach`
 
@@ -48,6 +73,8 @@ Fulfill [requirements](https://github.com/helloitsjoe/testing-workshop/issues/3)
   - `className`s - (not a functional concern)
 
 ---
+
+[1]: https://github.com/helloitsjoe/testing-workshop/issues/3
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
