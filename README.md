@@ -2,7 +2,16 @@
 
 This is a live coding workshop to walk through building a small React app using TDD.
 
-### Preparation:
+### Reference materials
+
+Wayfair JS Testing docs:
+
+- [Overview](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Overview/) (Contains links to Jest and Enzyme docs)
+- [React & Redux](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20React%20and%20Redux/)
+- [Strategy](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Strategy/)
+- [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
+
+### Preparation
 
 Set up a screen with these windows:
 
@@ -11,7 +20,7 @@ Set up a screen with these windows:
 - A terminal with `npm run test -- --watch` running
 - The page you're building (`npm start` will display a `localhost` link, the page will auto reload as you make changes)
 
-### Instructions:
+### Instructions
 
 You're building an app that has:
 
@@ -30,7 +39,7 @@ Be prepared to talk through your process, explaining why you're doing certain th
 1. Test that it returns true with a string input
 2. Create `validateInput` function, return `true`
 3. Test that it returns false with a number input
-4. Update function to check isNaN
+4. Update function with regex: `/[a-z ]*/gi.test(input)`
 
 #### `UserInput`
 
@@ -54,7 +63,7 @@ Be prepared to talk through your process, explaining why you're doing certain th
 #### Back to `validateInput`
 
 1. Write test for bug - mix of letters and numbers
-2. Update function with regex
+2. Fix regex: /^[a-z ]\*\$/gi.test(input)
 
 ### BONUS, if time allows:
 
@@ -65,12 +74,11 @@ Be prepared to talk through your process, explaining why you're doing certain th
 
 ---
 
-### Notes:
+### Notes
 
 - Isolate tests - use UserInputContainer as stateful example
 - Notice what we're intentionally not testing:
   - `state` and class methods (internals)
-  - `className`s - (not a functional concern)
 
 ---
 
