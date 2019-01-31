@@ -22,14 +22,11 @@ class UserInputContainer extends Component {
     );
   };
 
-  getBannerText = () =>
-    this.state.name ? `Welcome, ${this.state.name}!` : `Please enter your name`;
-
   render() {
-    const { valid } = this.state;
+    const { valid, name } = this.state;
     return (
       <div>
-        <BannerWrapper text={this.getBannerText()}>
+        <BannerWrapper name={name}>
           <UserInput
             valid={valid}
             onChange={this.handleChange}

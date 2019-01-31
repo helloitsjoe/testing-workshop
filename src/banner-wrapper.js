@@ -1,8 +1,10 @@
 import React from 'react';
 
-const BannerWrapper = ({ children, text }) => (
+const BannerWrapper = ({ children, name }) => (
   <div>
-    <h1 data-enzyme-id='BANNER'>{text}</h1>
+    <h1 data-enzyme-id='BANNER'>
+      {name ? `Welcome, ${name}!` : `Please enter your name`}
+    </h1>
     {children}
   </div>
 );
