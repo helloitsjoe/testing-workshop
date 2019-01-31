@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
 import UserInput from './user-input';
 import BannerWrapper from './banner-wrapper';
 import { validate } from './validation';
+import React, { Component } from 'react';
 
 class UserInputContainer extends Component {
   state = {
     valid: true,
     inputValue: '',
-    name: '',
+    name: ''
   };
 
   handleChange = e => {
@@ -29,7 +29,7 @@ class UserInputContainer extends Component {
     const { valid } = this.state;
     return (
       <div>
-        <BannerWrapper bannerText={this.getBannerText()}>
+        <BannerWrapper text={this.getBannerText()}>
           <UserInput
             valid={valid}
             onChange={this.handleChange}

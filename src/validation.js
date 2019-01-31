@@ -1,1 +1,3 @@
-export const validate = name => /^[a-z ]*$/i.test(name);
+export const validate = name => {
+  return !name || /^[a-z ]*$/gi.test(name);
+};
