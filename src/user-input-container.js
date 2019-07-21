@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UserInput from './user-input';
 import Banner from './banner';
+import UserInput from './user-input';
 import { validate } from './validation';
 
 class UserInputContainer extends Component {

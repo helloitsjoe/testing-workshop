@@ -1,3 +1,3 @@
 import { validate } from '../validation';
 
-it('', () => {});
+it('letters are valid', () => {});
