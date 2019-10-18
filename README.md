@@ -1,154 +1,108 @@
 # Frontend Testing Workshop
 
-This is a live coding workshop to walk through building a small React app using TDD.
+Live coding workshop to walk through building a small React app using TDD. It is
+not a comprehensive guide to testing, but a starting point to answer some basic
+questions:
+
+1. Where do I start?
+2. What do I test?
+3. How do I know I'm done?
 
 ### Reference materials
 
 Wayfair JS Testing docs:
 
-- [Overview](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Overview/) (Contains links to Jest and Enzyme docs)
-- [React & Redux](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20React%20and%20Redux/)
-- [Strategy](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Strategy/)
+- [Overview](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-overview/)
+  (Contains links to Jest and Enzyme docs)
+- [React & Redux](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-react-and-redux/)
+- [Strategy](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-strategy/)
 - [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
 
-### Preparation
+### What you're building
 
-Set up a screen with these windows:
+You're building a simple app that has a banner, input, and submit button:
+![image](https://github.csnzoo.com/storage/user/392/files/b0ee2e80-aef9-11e9-8c9a-33b1c456e79f)
 
-- Code editor
-- The [requirements][1]
-- A terminal with `npm run test -- --watch` running
-- The page you're building (`npm start` will display a `localhost` link, the page will auto reload as you make changes)
+It should have these components:
+
+- `UserInput` component with an input and a submit button, and a warning that
+  displays if the input is invalid
+- `Banner` component that displays a banner
+- `UserInputContainer` that holds state and change/submit handlers for the
+  presentational components
+- A validation function - letters/spaces are valid, numbers are invalid
+
 
 ### Instructions
 
-You're building an app that has:
+Use the [requirements][1] as a guide, checking off each box after you've both
+written tests for and built each feature.
 
-- A container with a banner and a presentational component `UserInput`
-- `UserInput` component with an input and a submit button, and a warning that displays if the input is invalid
-- A validation function - letters/spaces are valid, numbers are invalid
+1. From the project root, run `npm install`
+2. Start the test runner watching with `npm run test -- --watch`
 
-TDD it from the bottom up, starting with the validation function, then the `UserInput` presentational component, and finally the container that handles input validation and form submission.
+TDD it from the bottom up. Start with the validation function to cover the
+bascis of Jest, then use Enzyme to unit test the presentational components, then
+write integration tests that cover the container's functionality.
 
-Use the [requirements][1] as a guide, checking off each box after you've both written tests for and built each feature.
+# If you're doing this as a presentation
 
-Be prepared to talk through your process, explaining why you're doing certain things, as well as avoiding certain things.
+Be prepared to talk through your process, explaining why you're doing certain
+things, as well as avoiding certain things.
 
-#### `validateInput`
+- Why TDD?
+- Avoid internals like `this.state` and class instance methods
+- Declarative - Test WHAT it does, not HOW it does it
+- Unit/integration test tradeoffs
 
-1. Test that it returns true with a string input
-2. Create `validateInput` function, return `true`
-3. Test that it returns false with a number input
-4. Update function with regex: `/[a-z ]*/gi.test(input)`
+#### Where do I start?
 
-#### `UserInput`
+- Starting from scratch? Write tests first, using requirements as a guide
+- Testing existing components? Start with the happy path
 
-1. Write a test that it displays input and button
-2. Create component, make test pass
-3. Test for warning text on invalid input and vice versa
-4. Update component with `valid` prop
+#### What do I test?
 
-#### `UserInputContainer`
+- Test behavior, not implementation
 
-1. Update `index.js` to render `UserInputContainer`
-2. Make tests pass again
-3. Test that default text is 'Please enter your name'
-4. Create component, make it pass
-5. Test that submit changes banner text to 'Welcome, [user]!'
-6. Make test pass
-7. Test that submit resets banner text if no input
-8. Make test pass
-9. Integration test: warning on invalid input, button is disabled
+#### How do I know I'm done?
 
-#### Back to `validateInput`
+- All logic branches have been covered: not a perfect metric, but a good
+  guideline
 
-1. Write test for bug - mix of letters and numbers
-2. Fix regex: /^[a-z ]\*\$/gi.test(input)
+## Preparation
+
+Set up a screen with these windows:
+
+- Code editor with split screen: tests on one side, implementation on the other
+  (to avoid jumping around)
+- The [requirements][1]
+- A terminal
+
+Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
+(see [mdx-deck](https://github.com/jxnblk/mdx-deck) for more info)
+
+## Presentation
+
+- On the `master` branch, open page you're going to build with `npm start`
+- Switch to the empty template branch: `git checkout empty`
+- Run `npm test -- --watch`
+- Explain what we're looking at - requirements, file structure in code editor,
+  test watch
+- Follow the instructions above until all requirements are checked off. Reveal
+  the app when it's complete, built entirely without looking at the browser!
+- If bugs come up during the presentation, TDD them away!
 
 ### BONUS, if time allows:
 
 #### Refactor tests
 
-1. Show tests break with component mounted once in `describe` scope
-2. Write `beforeEach`, `afterEach`
+1. Refactor individual validation tests into one `test.each` block
+2. Show tests break with component mounted once in `describe` scope
+3. `beforeAll/Each`, `afterAll/Each`
 
 ---
 
-### Notes
+[1]: https://github.csnzoo.com/joboyle/frontend-testing-workshop/issues/1
 
-- Isolate tests - use UserInputContainer as stateful example
-- Notice what we're intentionally not testing:
-  - `state` and class methods (internals)
-
----
-
-[1]: https://github.com/helloitsjoe/testing-workshop/issues/3
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with
+[Create React App](https://github.com/facebook/create-react-app).

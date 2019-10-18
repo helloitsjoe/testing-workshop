@@ -11,6 +11,10 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  color: red;
+}
+
 h1 {
   color: purple;
 }

@@ -1,6 +1,6 @@
 import UserInput from './user-input';
-import BannerWrapper from './banner-wrapper';
-import { validate } from './validation';
+import Banner from './banner';
+import validate from './validation';
 import React, { Component } from 'react';
 
 class UserInputContainer extends Component {
@@ -26,13 +26,12 @@ class UserInputContainer extends Component {
     const { valid, name } = this.state;
     return (
       <div>
-        <BannerWrapper name={name}>
-          <UserInput
-            valid={valid}
-            onChange={this.handleChange}
-            onSubmit={this.handleSubmit}
-          />
-        </BannerWrapper>
+        <Banner name={name} />
+        <UserInput
+          valid={valid}
+          onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

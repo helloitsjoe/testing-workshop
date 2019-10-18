@@ -1,4 +1,4 @@
-import { validate } from '../validation';
+import validate from '../validation';
 
 // test.each is good for unit testing many variations/edge cases into a function.
 
