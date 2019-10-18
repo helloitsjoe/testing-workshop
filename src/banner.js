@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Banner({}) {
-  return null;
-}
+const Banner = ({}) => null;
+
+export default Banner;

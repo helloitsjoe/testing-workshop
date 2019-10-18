@@ -1,1 +1,1 @@
-export const validate = () => null;
+export default function validate() {}

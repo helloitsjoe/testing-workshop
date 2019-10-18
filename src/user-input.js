@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function UserInput({}) {
-  return null;
-}
+const UserInput = ({}) => null;
 
-// Test runner complains about input having a value with no change handler
+// Note: input gives a warning if 'value' is provided without 'onChange'
 UserInput.defaultProps = {
-  onChange() {},
+  onChange() {}
 };
+
+export default UserInput;

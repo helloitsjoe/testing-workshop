@@ -36,7 +36,6 @@ button {
   margin: 10px;
 }
 
-.warning {
+p {
   color: red;
-  border-color: red;
 }

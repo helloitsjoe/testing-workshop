@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Banner from './banner';
+import React, { Component, Fragment } from 'react';
 import UserInput from './user-input';
-import { validate } from './validation';
+import Banner from './banner';
+import validate from './validation';
 
 class UserInputContainer extends Component {
   state = {};
