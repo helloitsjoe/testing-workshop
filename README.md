@@ -12,7 +12,6 @@ guide to testing, but a starting point to answer some basic questions:
 JS Testing docs:
 
 - [Jest docs](https://jestjs.io/docs/en/api)
-  (Contains links to Jest and React Testing Library docs)
 - [React Testing Library Docs](https://testing-library.com/docs/react-testing-library/intro)
 - [React Testing Library Cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet)
 
