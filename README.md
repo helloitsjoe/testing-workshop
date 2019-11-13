@@ -9,18 +9,17 @@ guide to testing, but a starting point to answer some basic questions:
 
 ### Reference materials
 
-Wayfair JS Testing docs:
+JS Testing docs:
 
-- [Overview](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-overview/)
+- [Jest docs](https://jestjs.io/docs/en/api)
   (Contains links to Jest and React Testing Library docs)
-- [React & Redux](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-react-and-redux/)
-- [Strategy](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-strategy/)
-- [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
+- [React Testing Library Docs](https://testing-library.com/docs/react-testing-library/intro)
+- [React Testing Library Cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet)
 
 ### What you're building
 
 You're building a simple app that has a banner, input, and submit button:
-![image](https://github.csnzoo.com/storage/user/392/files/b0ee2e80-aef9-11e9-8c9a-33b1c456e79f)
+![image](https://user-images.githubusercontent.com/8823810/68774971-d5326000-05fb-11ea-928d-d80b3e899132.png)
 
 It should have these components:
 
@@ -97,6 +96,6 @@ Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck` (se
 
 ---
 
-[1]: https://github.csnzoo.com/joboyle/frontend-testing-workshop/issues/1
+[1]: https://github.com/helloitsjoe/testing-workshop/issues/3
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
