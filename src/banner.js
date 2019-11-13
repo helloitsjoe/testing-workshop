@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Banner = ({}) => null;
+const Banner = ({}) => {
+  return null;
+};
 
 export default Banner;

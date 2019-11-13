@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import UserInput from './user-input';
 import Banner from './banner';
 import validate from './validation';
