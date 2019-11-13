@@ -1,8 +1,7 @@
 # Frontend Testing Workshop
 
-Live coding workshop to walk through building a small React app using TDD. It is
-not a comprehensive guide to testing, but a starting point to answer some basic
-questions:
+Live coding workshop to walk through building a small React app using TDD. It is not a comprehensive
+guide to testing, but a starting point to answer some basic questions:
 
 1. Where do I start?
 2. What do I test?
@@ -13,7 +12,7 @@ questions:
 Wayfair JS Testing docs:
 
 - [Overview](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-overview/)
-  (Contains links to Jest and Enzyme docs)
+  (Contains links to Jest and React Testing Library docs)
 - [React & Redux](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-react-and-redux/)
 - [Strategy](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-strategy/)
 - [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
@@ -25,30 +24,28 @@ You're building a simple app that has a banner, input, and submit button:
 
 It should have these components:
 
-- `UserInput` component with an input and a submit button, and a warning that
-  displays if the input is invalid
+- `UserInput` component with an input and a submit button, and a warning that displays if the input
+  is invalid
 - `Banner` component that displays a banner
-- `UserInputContainer` that holds state and change/submit handlers for the
-  presentational components
+- `UserInputContainer` that holds state and change/submit handlers for the presentational components
 - A validation function - letters/spaces are valid, numbers are invalid
-
 
 ### Instructions
 
-Use the [requirements][1] as a guide, checking off each box after you've both
-written tests for and built each feature.
+Use the [requirements][1] as a guide, checking off each box after you've both written tests for and
+built each feature.
 
 1. From the project root, run `npm install`
 2. Start the test runner watching with `npm run test -- --watch`
 
-TDD it from the bottom up. Start with the validation function to cover the
-bascis of Jest, then use Enzyme to unit test the presentational components, then
-write integration tests that cover the container's functionality.
+TDD it from the bottom up. Start with the validation function to cover the bascis of Jest, then use
+React Testing Library to unit test the presentational components, then write integration tests that
+cover the container's functionality.
 
 # If you're doing this as a presentation
 
-Be prepared to talk through your process, explaining why you're doing certain
-things, as well as avoiding certain things.
+Be prepared to talk through your process, explaining why you're doing certain things, as well as
+avoiding certain things.
 
 - Why TDD?
 - Avoid internals like `this.state` and class instance methods
@@ -66,30 +63,28 @@ things, as well as avoiding certain things.
 
 #### How do I know I'm done?
 
-- All logic branches have been covered: not a perfect metric, but a good
-  guideline
+- All logic branches have been covered: not a perfect metric, but a good guideline
 
 ## Preparation
 
 Set up a screen with these windows:
 
-- Code editor with split screen: tests on one side, implementation on the other
-  (to avoid jumping around)
+- Code editor with split screen: tests on one side, implementation on the other (to avoid jumping
+  around)
 - The [requirements][1]
 - A terminal
 
-Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
-(see [mdx-deck](https://github.com/jxnblk/mdx-deck) for more info)
+Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck` (see
+[mdx-deck](https://github.com/jxnblk/mdx-deck) for more info)
 
 ## Presentation
 
 - On the `master` branch, open page you're going to build with `npm start`
 - Switch to the empty template branch: `git checkout empty`
 - Run `npm test -- --watch`
-- Explain what we're looking at - requirements, file structure in code editor,
-  test watch
-- Follow the instructions above until all requirements are checked off. Reveal
-  the app when it's complete, built entirely without looking at the browser!
+- Explain what we're looking at - requirements, file structure in code editor, test watch
+- Follow the instructions above until all requirements are checked off. Reveal the app when it's
+  complete, built entirely without looking at the browser!
 - If bugs come up during the presentation, TDD them away!
 
 ### BONUS, if time allows:
@@ -104,5 +99,4 @@ Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
 
 [1]: https://github.csnzoo.com/joboyle/frontend-testing-workshop/issues/1
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
