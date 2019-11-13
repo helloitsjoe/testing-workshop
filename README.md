@@ -10,18 +10,15 @@ questions:
 
 ### Reference materials
 
-Wayfair JS Testing docs:
+JS Testing docs:
 
-- [Overview](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-overview/)
-  (Contains links to Jest and Enzyme docs)
-- [React & Redux](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-react-and-redux/)
-- [Strategy](https://docs.csnzoo.com/javascript/documentation/testing-and-static-analysis/testing-strategy/)
-- [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
+- [Jest docs](https://jestjs.io/docs/en/api)
+- [Enzyme docs](https://airbnb.io/enzyme/docs/api/)
 
 ### What you're building
 
 You're building a simple app that has a banner, input, and submit button:
-![image](https://github.csnzoo.com/storage/user/392/files/b0ee2e80-aef9-11e9-8c9a-33b1c456e79f)
+![image](https://user-images.githubusercontent.com/8823810/68774971-d5326000-05fb-11ea-928d-d80b3e899132.png)
 
 It should have these components:
 
@@ -32,7 +29,6 @@ It should have these components:
   presentational components
 - A validation function - letters/spaces are valid, numbers are invalid
 
-
 ### Instructions
 
 Use the [requirements][1] as a guide, checking off each box after you've both
@@ -42,8 +38,9 @@ written tests for and built each feature.
 2. Start the test runner watching with `npm run test -- --watch`
 
 TDD it from the bottom up. Start with the validation function to cover the
-bascis of Jest, then use Enzyme to unit test the presentational components, then
-write integration tests that cover the container's functionality.
+bascis of Jest, then use React Testing Library to unit test the presentational
+components, then write integration tests that cover the container's
+functionality.
 
 # If you're doing this as a presentation
 
@@ -102,7 +99,7 @@ Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
 
 ---
 
-[1]: https://github.csnzoo.com/joboyle/frontend-testing-workshop/issues/1
+[1]: https://github.com/helloitsjoe/testing-workshop/issues/3
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
