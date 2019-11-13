@@ -1,9 +1,7 @@
 import React from 'react';
 
-const Banner = ({ name }) => (
-  <h1 data-enzyme-id='BANNER'>
-    {name ? `Welcome, ${name}!` : `Please enter your name`}
-  </h1>
-);
+const Banner = ({ name }) => {
+  return <h1 data-testid="banner">{name ? `Welcome, ${name}!` : 'Please enter your name'}</h1>;
+};
 
 export default Banner;

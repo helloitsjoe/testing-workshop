@@ -1,10 +1,10 @@
 import React from 'react';
 
-const UserInput = ({ valid, onChange, onSubmit }) => (
-  <form data-enzyme-id='FORM' onSubmit={onSubmit}>
-    <input data-enzyme-id='INPUT' onChange={onChange} />
-    <button data-enzyme-id='BUTTON'>Submit</button>
-    {!valid && <p data-enzyme-id='WARNING'>Numbers are invalid!</p>}
+const UserInput = ({ value, isValid, onChange, onSubmit }) => (
+  <form onSubmit={onSubmit}>
+    <input value={value} onChange={onChange} placeholder="Enter name" />
+    <button>Submit</button>
+    {!isValid && <p>Numbers are invalid</p>}
   </form>
 );
 
