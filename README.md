@@ -5,39 +5,43 @@ not a comprehensive guide to testing, but a starting point to answer some basic
 questions:
 
 1. Where do I start?
-2. What is this test telling me?
+2. What do I test?
 3. How do I know I'm done?
 
 ### Reference materials
 
-Wayfair JS Testing docs:
+JS Testing docs:
 
-- [Overview](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Overview/)
-  (Contains links to Jest and Enzyme docs)
-- [React & Redux](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20React%20and%20Redux/)
-- [Strategy](https://docs.csnzoo.com/javascript/documentation/Testing%20&%20Static%20Analysis/Testing%20Strategy/)
-- [Patterns](https://docs.csnzoo.com/javascript/patterns/tests/)
+- [Jest docs](https://jestjs.io/docs/en/api)
+- [React Testing Library Docs](https://testing-library.com/docs/react-testing-library/intro)
+- [React Testing Library Cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet)
 
-### Instructions
+### What you're building
 
-1. From the project root, run `npm install`
-2. Start the test runner watching with `npm run test -- --watch`
+You're building a simple app that has a banner, input, and submit button:
+![image](https://user-images.githubusercontent.com/8823810/68774971-d5326000-05fb-11ea-928d-d80b3e899132.png)
 
-You're building an app that has:
+It should have these components:
 
 - `UserInput` component with an input and a submit button, and a warning that
   displays if the input is invalid
-- `BannerWrapper` component that wraps children and displays a banner
+- `Banner` component that displays a banner
 - `UserInputContainer` that holds state and change/submit handlers for the
   presentational components
 - A validation function - letters/spaces are valid, numbers are invalid
 
-TDD it from the bottom up. Start with the validation function to cover the
-bascis of Jest, then use Enzyme to unit test the presentational components, then
-write integration tests that cover the container's functionality.
+### Instructions
 
 Use the [requirements][1] as a guide, checking off each box after you've both
 written tests for and built each feature.
+
+1. From the project root, run `npm install`
+2. Start the test runner watching with `npm run test -- --watch`
+
+TDD it from the bottom up. Start with the validation function to cover the
+bascis of Jest, then use React Testing Library to unit test the presentational
+components, then write integration tests that cover the container's
+functionality.
 
 # If you're doing this as a presentation
 
@@ -45,7 +49,7 @@ Be prepared to talk through your process, explaining why you're doing certain
 things, as well as avoiding certain things.
 
 - Why TDD?
-- Avoid internals like `this.state`
+- Avoid internals like `this.state` and class instance methods
 - Declarative - Test WHAT it does, not HOW it does it
 - Unit/integration test tradeoffs
 
@@ -54,10 +58,9 @@ things, as well as avoiding certain things.
 - Starting from scratch? Write tests first, using requirements as a guide
 - Testing existing components? Start with the happy path
 
-#### What is this test telling me?
+#### What do I test?
 
-- Tests are living documentation, they should be clear what behavior is being
-  tested, and clear/specific about what's wrong when they fail
+- Test behavior, not implementation
 
 #### How do I know I'm done?
 
@@ -84,7 +87,7 @@ Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
 - Explain what we're looking at - requirements, file structure in code editor,
   test watch
 - Follow the instructions above until all requirements are checked off. Reveal
-  the completed app.
+  the app when it's complete, built entirely without looking at the browser!
 - If bugs come up during the presentation, TDD them away!
 
 ### BONUS, if time allows:
@@ -97,7 +100,7 @@ Optional: Update the slide deck in `deck.mdx`. Launch it with `npm run deck`
 
 ---
 
-[1]: https://git.csnzoo.com/joboyle/frontend-testing-workshop/issues/1
+[1]: https://github.com/helloitsjoe/testing-workshop/issues/3
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
